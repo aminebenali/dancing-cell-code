@@ -74,7 +74,7 @@ public class DcRecordedSongsDlg : NvUIDialogBase
 	private void ShowRecordingFinishedPanel()
 	{
 		PanRecordingFinished.gameObject.SetActiveRecursively(true);
-		
+        HideRecordedInPanel();
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");
@@ -82,6 +82,7 @@ public class DcRecordedSongsDlg : NvUIDialogBase
     private void HideRecordingFinishedPanel()
     {
 		PanRecordingFinished.gameObject.SetActiveRecursively(false);
+        HideRecordedInPanel();
 		
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");

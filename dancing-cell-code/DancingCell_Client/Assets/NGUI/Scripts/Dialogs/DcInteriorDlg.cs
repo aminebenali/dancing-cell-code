@@ -76,23 +76,11 @@ public class DcInteriorDlg : NvUIDialogBase
 	
 	public void GotoSuccess()
     {
-        showDialog(false);
-		
-		GameObject obj = GameObject.Find("Success");
-		if(obj)
-		{
-        	NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-			DcSuccessDlg dlgS = m_DialogMgr.FindDialog("SuccessDlg")as DcSuccessDlg;
-			dlgS.showDialog(true);
-		}
-		else
-		{
-			SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-        	mgr.AddScene("UI_MyHome_Success");
-		}
-		
-		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        mgr.ChangeScene("UI_MyHome_Success");
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_touch");
     }
 	
 	private void GotoFriend()

@@ -133,23 +133,11 @@ public class DcChallengeListDlg : NvUIDialogBase
 
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene(mgr.cShareData.lstBuildingData[mgr.cShareData.nCurSelBuildingIdx].str3DSceneName);
-		mgr.AddScene("UI_DancingMain",AddUIDancingMainEnd);
         mgr.cShareData.nDancingEntranceType = 0;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_enter");
 	}
-	
-	void AddUIDancingMainEnd(string str)
-    {
-		GameObject obj = GameObject.Find("DancingMain");
-		if(obj)
-		{
-			NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-			DcDancingMainDlg dlgDM = m_DialogMgr.FindDialog("DancingMainDlg")as DcDancingMainDlg;
-			dlgDM.StartDancing();
-		}
-    }
 	
 	public void SetChallengeChallenge()
 	{

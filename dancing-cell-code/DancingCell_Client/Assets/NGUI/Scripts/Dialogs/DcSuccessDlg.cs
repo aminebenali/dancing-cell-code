@@ -16,18 +16,11 @@ public class DcSuccessDlg : NvUIDialogBase
 
     private void ReturnInterior()
     {
-        showDialog(false);
-		
-        GameObject obj = GameObject.Find("Interior");
-		if(obj)
-		{
-        	NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-			DcInteriorDlg dlgI = m_DialogMgr.FindDialog("InteriorDlg")as DcInteriorDlg;
-			dlgI.showDialog(true);
-		}
-		
-		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        mgr.ChangeScene("UI_MyHome_Interior");
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_touch");
     }
 	
 	private void GetReward()
