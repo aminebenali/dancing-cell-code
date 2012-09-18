@@ -1,0 +1,196 @@
+[
+	{
+		"nID" : 0,
+		"litOpeData" : [
+							{
+								"nShowTime" : 752,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [2,3] },
+													"Normal" : { "litOpeInfo" : [2,3,1,2] },
+													"Diff" : { "litOpeInfo" : [13,14,32,42] }
+												}
+							},
+							{
+								"nShowTime" : 1128,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [3,4] },
+													"Normal" : { "litOpeInfo" : [4,1,2,3] },
+													"Diff" : { "litOpeInfo" : [23,24,14,41] }
+												}
+							},
+							{
+								"nShowTime" : 1504,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,2] },
+													"Normal" : { "litOpeInfo" : [2,1,2,1] },
+													"Diff" : { "litOpeInfo" : [31,32,42,31] }
+												}
+							},
+							{
+								"nShowTime" : 1880,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [4,1,4] },
+													"Normal" : { "litOpeInfo" : [3,4,1,2] },
+													"Diff" : { "litOpeInfo" : [41,42,14,13] }
+												}
+							},
+							{
+								"nShowTime" : 2256,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,4,2] },
+													"Normal" : { "litOpeInfo" : [4,3,2,1] },
+													"Diff" : { "litOpeInfo" : [24,13,24,14] }
+												}
+							},
+							{
+								"nShowTime" : 2632,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,2] },
+													"Normal" : { "litOpeInfo" : [4,1,4,1] },
+													"Diff" : { "litOpeInfo" : [31,32,41,42] }
+												}
+							},
+							{
+								"nShowTime" : 3008,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [4,4] },
+													"Normal" : { "litOpeInfo" : [3,3,2,1] },
+													"Diff" : { "litOpeInfo" : [41,23,24,41] }
+												}
+							},
+							{
+								"nShowTime" : 3384,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [4,2] },
+													"Normal" : { "litOpeInfo" : [4,2,1,3] },
+													"Diff" : { "litOpeInfo" : [24,24,23,42] }
+												}
+							},
+							{
+								"nShowTime" : 3761,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [3,1] },
+													"Normal" : { "litOpeInfo" : [1,4,2,3] },
+													"Diff" : { "litOpeInfo" : [41,42,13,14] }
+												}
+							},
+							{
+								"nShowTime" : 4137,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,3,2] },
+													"Normal" : { "litOpeInfo" : [1,1,3,3] },
+													"Diff" : { "litOpeInfo" : [42,41,32,31] }
+												}
+							},
+							{
+								"nShowTime" : 4513,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,4] },
+													"Normal" : { "litOpeInfo" : [2,4,2,1] },
+													"Diff" : { "litOpeInfo" : [13,23,14,24] }
+												}
+							},
+							{
+								"nShowTime" : 4889,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [1,4,3] },
+													"Normal" : { "litOpeInfo" : [4,1,4,2] },
+													"Diff" : { "litOpeInfo" : [42,41,14,24] }
+												}
+							},
+							{
+								"nShowTime" : 5265,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [4,2] },
+													"Normal" : { "litOpeInfo" : [3,3,1,4] },
+													"Diff" : { "litOpeInfo" : [31,32,41,42] }
+												}
+							},
+							{
+								"nShowTime" : 5641,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [2,1] },
+													"Normal" : { "litOpeInfo" : [1,2,4,1] },
+													"Diff" : { "litOpeInfo" : [24,23,14,31] }
+												}
+							},
+							{
+								"nShowTime" : 6017,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [4,3,2] },
+													"Normal" : { "litOpeInfo" : [3,3,4,4] },
+													"Diff" : { "litOpeInfo" : [42,41,24,23] }
+												}
+							},
+							{
+								"nShowTime" : 6394,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [2,2,3] },
+													"Normal" : { "litOpeInfo" : [2,1,4,1] },
+													"Diff" : { "litOpeInfo" : [14,41,42,31] }
+												}
+							},
+							{
+								"nShowTime" : 6770,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [3,4] },
+													"Normal" : { "litOpeInfo" : [4,1,1,4] },
+													"Diff" : { "litOpeInfo" : [24,13,41,31] }
+												}
+							},
+							{
+								"nShowTime" : 7146,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [0,0] },
+													"Normal" : { "litOpeInfo" : [0,0] },
+													"Diff" : { "litOpeInfo" : [0,0] }
+												}
+							},
+							{
+								"nShowTime" : 7522,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [2,3,1] },
+													"Normal" : { "litOpeInfo" : [2,4,3,4,1] },
+													"Diff" : { "litOpeInfo" : [42,14,24,31,14] }
+												}
+							},
+							{
+								"nShowTime" : 7898,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [2,4,2] },
+													"Normal" : { "litOpeInfo" : [4,1,1,4,2] },
+													"Diff" : { "litOpeInfo" : [24,14,31,41,32] }
+												}
+							},
+							{
+								"nShowTime" : 8274,
+								"mapOpeCode" : 
+												{
+													"Simple" : { "litOpeInfo" : [0,0] },
+													"Normal" : { "litOpeInfo" : [0,0] },
+													"Diff" : { "litOpeInfo" : [0,0] }
+												}
+							}
+						]
+	}
+]
