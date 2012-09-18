@@ -1,0 +1,26 @@
+[
+	{
+		"nTaskID" : 0,
+		"strTaskName" : "",
+		"strTaskDescribe" : "找一首简单的歌获得40G币",
+		"nState" : 0,
+		"nRewardMoney" : 1000,
+		"nRewardExp" : 500
+	},
+	{
+		"nTaskID" : 1,
+		"strTaskName" : "",
+		"strTaskDescribe" : "顺利过关的同时打出50个以上的连击",
+		"nState" : 0,
+		"nRewardMoney" : 1200,
+		"nRewardExp" : 600
+	},
+	{
+		"nTaskID" : 2,
+		"strTaskName" : "",
+		"strTaskDescribe" : "在组队模式下进行一次游戏",
+		"nState" : 0,
+		"nRewardMoney" : 1300,
+		"nRewardExp" : 700
+	}
+]

@@ -1,0 +1,111 @@
+
+[
+    {
+        "nBuildingID" : 0,
+        "strBuildingName" : "\u6E38\u4E50\u573A",
+        "strMasterName"   : "",
+        "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
+        "litSongIDs"      : [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "litDiffLvs"      : [
+            "Simple",
+            "Simple",
+            "Simple",
+            "Normal",
+            "Normal"
+        ],
+        "litSongMaster"   : [
+            "Nancy",
+            "\u5F69\u540D\u674F\u5B50",
+            "\u4ED3\u6728\u674F",
+            "\u5C0F\u6CFD\u7F8E",
+            "\u4ED3\u6301\u831C"
+        ],
+        "litMasterSex"    : [
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "litMode"         : [
+            "Default",
+            "Default",
+            "Default",
+            "Default",
+            "Default"
+        ],
+        "litHighScores"   : [
+            16500,
+            10000,
+            11500,
+            9500,
+            10000
+        ]
+    },
+    {
+        "nBuildingID" : 1,
+        "strBuildingName" : "\u9152\u5427",
+        "strMasterName"   : "",
+        "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
+        "litSongIDs"      : [
+            5,
+            6
+        ],
+        "litDiffLvs"      : [
+            "Diff",
+            "Normal"
+        ],
+        "litSongMaster"   : [
+            "\u9ED1\u5D0E\u5F69",
+            "\u671D\u7F8E\u7A57\u9999"
+        ],
+        "litMasterSex"    : [
+            1,
+            1
+        ],
+        "litMode"         : [
+            "Default",
+            "Default"
+        ],
+        "litHighScores"   : [
+            11500,
+            9500
+        ]
+    },
+    {
+        "nBuildingID" : 2,
+        "strBuildingName" : "\u591C\u603B\u4F1A",
+        "strMasterName"   : "",
+        "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
+        "litSongIDs"      : [
+            7,
+            8
+        ],
+        "litDiffLvs"      : [
+            "Diff",
+            "Diff"
+        ],
+        "litSongMaster"   : [
+            "\u795E\u8C37\u59EC",
+            "\u5CA9\u672C\u4E9A\u7531\u7F8E"
+        ],
+        "litMasterSex"    : [
+            1,
+            1
+        ],
+        "litMode"         : [
+            "Default",
+            "Default"
+        ],
+        "litHighScores"   : [
+            10000,
+            11500
+        ]
+    }
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"nRoomID" : 0,
+		"strRoomName" : "怡红院",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["刘骏","李香君",""],
+		"litPeopleSex" : [0,1]
+	},
+	{
+		"nRoomID" : 1,
+		"strRoomName" : "丽春苑",
+		"strMode" : "Default",
+		"strDiff" : "Normal",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["上官婉儿","李治",""],
+		"litPeopleSex" : [1,0]
+	},
+	{
+		"nRoomID" : 2,
+		"strRoomName" : "金美楼",
+		"strMode" : "Default",
+		"strDiff" : "Diff",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["刘子业","李师师",""],
+		"litPeopleSex" : [0,1]
+	},
+	{
+		"nRoomID" : 3,
+		"strRoomName" : "鑫雅阁",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["完颜亮","梁红玉",""],
+		"litPeopleSex" : [0,1]
+	},
+	{
+		"nRoomID" : 4,
+		"strRoomName" : "藏娇阁",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["苏小小","朱全忠",""],
+		"litPeopleSex" : [1,0]
+	},
+	{
+		"nRoomID" : 5,
+		"strRoomName" : "醉花楼",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["萧宝卷","陈圆圆",""],
+		"litPeopleSex" : [0,1]
+	},
+	{
+		"nRoomID" : 6,
+		"strRoomName" : "来仪阁",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["赛金花","杨广",""],
+		"litPeopleSex" : [1,0]
+	},
+	{
+		"nRoomID" : 7,
+		"strRoomName" : "天上人间",
+		"strMode" : "Default",
+		"strDiff" : "Simple",
+		"nSongID" : 0,
+		"nNumOfPeople" : 2,
+		"litPeopleName" : ["朱厚照","杜十娘",""],
+		"litPeopleSex" : [0,1]
+	}
+]

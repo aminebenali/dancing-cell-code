@@ -1,0 +1,35 @@
+[
+	{
+		"nBuildingID" : 0,
+		"strBuildingName" : "游乐场",
+		"strMasterName" : "",
+		"str3DSceneName" : "3D_DancingMain_Scene_LoveBear",
+		"litSongIDs" : [0,1,2],
+		"litDiffLvs" : ["Simple","Simple","Simple"],
+		"litSongMaster" : ["黑泽爱","彩名杏子","仓木杏"],
+		"litMode" : ["Default","Default","Default"],
+		"litHighScores" : [9500,10000,11500]
+	},
+	{
+		"nBuildingID" : 1,
+		"strBuildingName" : "酒吧",
+		"strMasterName" : "",
+		"str3DSceneName" : "3D_DancingMain_Scene_LoveBear",
+		"litSongIDs" : [3,4,5],
+		"litDiffLvs" : ["Normal","Normal","Diff"],
+		"litSongMaster" : ["小泽美","仓持茜","黑崎彩"],
+		"litMode" : ["Default","Default","Default"],
+		"litHighScores" : [9500,10000,11500]
+	},
+	{
+		"nBuildingID" : 2,
+		"strBuildingName" : "夜总会",
+		"strMasterName" : "",
+		"str3DSceneName" : "3D_DancingMain_Scene_LoveBear",
+		"litSongIDs" : [6,7,8],
+		"litDiffLvs" : ["Normal","Diff","Diff"],
+		"litSongMaster" : ["朝美穗香","神谷姬","岩本亚由美"],
+		"litMode" : ["Default","Default","Default"],
+		"litHighScores" : [9500,10000,11500]
+	}
+]

@@ -1,0 +1,42 @@
+[
+	{
+		"nFriendID" : 0,
+		"strFriendName" : "上官婉儿",
+		"nFriendSex" : 1,
+		"nFriendLv" : 5,
+		"nHasMusic" : 6,
+		"nDancingCnt" : 3
+	},
+	{
+		"nFriendID" : 1,
+		"strFriendName" : "李师师",
+		"nFriendSex" : 1,
+		"nFriendLv" : 8,
+		"nHasMusic" : 8,
+		"nDancingCnt" : 6
+	},
+	{
+		"nFriendID" : 2,
+		"strFriendName" : "完颜亮",
+		"nFriendSex" : 0,
+		"nFriendLv" : 3,
+		"nHasMusic" : 2,
+		"nDancingCnt" : 1
+	},
+	{
+		"nFriendID" : 3,
+		"strFriendName" : "杨广",
+		"nFriendSex" : 0,
+		"nFriendLv" : 12,
+		"nHasMusic" : 15,
+		"nDancingCnt" : 20
+	},
+	{
+		"nFriendID" : 4,
+		"strFriendName" : "陈圆圆",
+		"nFriendSex" : 1,
+		"nFriendLv" : 17,
+		"nHasMusic" : 20,
+		"nDancingCnt" : 32
+	}
+]
