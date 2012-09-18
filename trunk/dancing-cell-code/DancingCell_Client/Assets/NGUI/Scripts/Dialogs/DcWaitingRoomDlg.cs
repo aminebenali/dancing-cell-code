@@ -130,21 +130,10 @@ public class DcWaitingRoomDlg : NvUIDialogBase
     {
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene(mgr.cShareData.lstBuildingData[mgr.cShareData.cCurSongData.nWhereScene].str3DSceneName);
-		mgr.AddScene("UI_DancingMain",AddUIDancingMainEnd);
 		mgr.cShareData.nDancingEntranceType = 2;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");
-    }
-	void AddUIDancingMainEnd(string str)
-    {
-		GameObject obj = GameObject.Find("DancingMain");
-		if(obj)
-		{
-			NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-			DcDancingMainDlg dlgDM = m_DialogMgr.FindDialog("DancingMainDlg")as DcDancingMainDlg;;
-			dlgDM.StartDancing();
-		}
     }
 	
 }

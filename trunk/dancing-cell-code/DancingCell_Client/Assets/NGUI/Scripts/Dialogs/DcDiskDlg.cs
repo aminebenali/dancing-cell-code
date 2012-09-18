@@ -1,6 +1,5 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using LitJson;
 
 public class DcDiskDlg : NvUIDialogBase 
@@ -287,48 +286,39 @@ public class DcDiskDlg : NvUIDialogBase
         GameObject obj = sender as GameObject;
         char[] splt = { '_' };
         string lastnum = DcGlobalFunc.GetLastString(obj.transform.name, splt);
+        Debug.LogError(lastnum);
+        int nIdx = Convert.ToInt32(lastnum);
 
-        //Debug.LogError(lastnum);
-        switch (lastnum)
+        switch (nIdx)
         {
-            case "0":
+            case 0:
                 mgr.cShareData.strDiffLv = "Simple";
                 break;
-            case "1":
+            case 1:
                 mgr.cShareData.strDiffLv = "Normal";
                 break;
-            case "2":
+            case 2:
                 mgr.cShareData.strDiffLv = "Diff";
                 break;
         }
+        Debug.LogError(mgr.cShareData.strDiffLv);
 		
-		showDialog(false);
+		//showDialog(false);
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
         soundctr.PlaySe("ui_enter");
 
         mgr.cShareData.cCurSongData = mgr.cShareData.lstSongData[nAtMiddleIdx];
+        mgr.cShareData.strMode = "Default";
 		if(mgr.cShareData.nDiskEntranceType == 0)
 		{
             mgr.ChangeScene(mgr.cShareData.lstBuildingData[mgr.cShareData.lstSongData[nAtMiddleIdx].nWhereScene].str3DSceneName);
             //Debug.LogError(mgr.cShareData.lstBuildingData[mgr.cShareData.lstSongData[nAtMiddleIdx].nWhereScene].str3DSceneName);
-			mgr.AddScene("UI_DancingMain",AddUIDancingMainEnd);
 			mgr.cShareData.nDancingEntranceType = 1;
 		}
 		else if(mgr.cShareData.nDiskEntranceType == 1)
 		{
 			mgr.ChangeScene("UI_Lobby");
-		}
-    }
-	
-	void AddUIDancingMainEnd(string str)
-    {
-		GameObject obj = GameObject.Find("DancingMain");
-		if(obj)
-		{
-			NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-			DcDancingMainDlg dlgDM = m_DialogMgr.FindDialog("DancingMainDlg")as DcDancingMainDlg;;
-			dlgDM.StartDancing();
 		}
     }
 
