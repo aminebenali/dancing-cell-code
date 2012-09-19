@@ -22,3 +22,4 @@ Default = 传统
 Drumbeat = 节奏
 Dynamic = 动感
 Notation = 乐谱
+ExitHintContext = 退出游戏？

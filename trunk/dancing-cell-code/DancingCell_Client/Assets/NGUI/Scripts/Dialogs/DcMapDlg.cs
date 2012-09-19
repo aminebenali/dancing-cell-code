@@ -1,13 +1,12 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using LitJson;
 
 public class DcMapDlg : NvUIDialogBase 
-{	
-	public UILabel LabTemp1 = null;
-	public UILabel LabTemp2 = null;
-	public UILabel LabTemp3 = null;
+{
+    public UILabel[] LabBuildingName;
+    public UISprite[] SprBuildingBg;
+    public UISprite[] SprBuildingIcon;
 	
 	protected override void OnDlgCreate()
 	{
@@ -17,9 +16,14 @@ public class DcMapDlg : NvUIDialogBase
 	protected override void OnDlgInit ()
     {
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-        LabTemp1.text = mgr.cShareData.lstBuildingData[0].strBuildingName;
-        LabTemp2.text = mgr.cShareData.lstBuildingData[1].strBuildingName;
-        LabTemp3.text = mgr.cShareData.lstBuildingData[2].strBuildingName;
+        for (int i = 0; i < mgr.cShareData.lstBuildingData.Count; i++)
+        {
+            LabBuildingName[i].text = mgr.cShareData.lstBuildingData[i].strBuildingName;
+
+            float fLabWidth = LabBuildingName[i].relativeSize.x * 24f + 48f + 6f;
+            SprBuildingBg[i].transform.localScale = new Vector3(fLabWidth, 40f, 1f);
+            SprBuildingIcon[i].transform.localPosition = new Vector3(-fLabWidth / 2f + 26f, 0f, -220f);
+        }
 	}
 	
     private void GotoMyHome()
@@ -33,29 +37,17 @@ public class DcMapDlg : NvUIDialogBase
 		
 		PlayBtnSound();
     }
-	
-	private void GotoChallenge_SeaSide()
+
+    private void GotoChallengBuilding(object sender)
     {
-		//Debug.Log("GotoChallenge_SeaSide");
+        GameObject obj = sender as GameObject;
+        char[] splt = { '_' };
+        string strLastNum = DcGlobalFunc.GetLastString(obj.transform.name, splt);
+        int nSelBuilding = Convert.ToInt32(strLastNum) - 1;
+
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-		mgr.cShareData.nCurSelBuildingIdx = 0;
+        mgr.cShareData.nCurSelBuildingIdx = nSelBuilding;
         AddChallengeListBegin();
-    }
-	
-	private void GotoChallenge_Space()
-    {
-		//Debug.Log("GotoChallenge_Space");
-		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-		mgr.cShareData.nCurSelBuildingIdx = 1;
- 		AddChallengeListBegin();
-    }
-	
-	private void GotoChallenge_Street()
-    {
-		//Debug.Log("GotoChallenge_Street");
-		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-		mgr.cShareData.nCurSelBuildingIdx = 2;
-		AddChallengeListBegin();
     }
 	
 	void AddChallengeListBegin()

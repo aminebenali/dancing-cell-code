@@ -1,82 +1,82 @@
 [
 	{
 		"nRoomID" : 0,
-		"strRoomName" : "怡红院",
+		"strRoomName" : "Green Delight",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["刘骏","李香君",""],
+		"litPeopleName" : ["Jun-Da Liu","Hsiang-Chun Lee",""],
 		"litPeopleSex" : [0,1]
 	},
 	{
 		"nRoomID" : 1,
-		"strRoomName" : "丽春苑",
+		"strRoomName" : "LiChunYuan",
 		"strMode" : "Default",
 		"strDiff" : "Normal",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["上官婉儿","李治",""],
+		"litPeopleName" : ["Shangguan Wan'er","Zhi-Ping Li",""],
 		"litPeopleSex" : [1,0]
 	},
 	{
 		"nRoomID" : 2,
-		"strRoomName" : "金美楼",
+		"strRoomName" : "Gold beauty floor",
 		"strMode" : "Default",
 		"strDiff" : "Diff",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["刘子业","李师师",""],
+		"litPeopleName" : ["Liu Song","Worthy",""],
 		"litPeopleSex" : [0,1]
 	},
 	{
 		"nRoomID" : 3,
-		"strRoomName" : "鑫雅阁",
+		"strRoomName" : "Singa Court",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["完颜亮","梁红玉",""],
+		"litPeopleName" : ["Hailingwang","Hong-Yu Liang",""],
 		"litPeopleSex" : [0,1]
 	},
 	{
 		"nRoomID" : 4,
-		"strRoomName" : "藏娇阁",
+		"strRoomName" : "Hide jiao pavilion",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["苏小小","朱全忠",""],
+		"litPeopleName" : ["So Siu Siu","ZhuQuanZhong",""],
 		"litPeopleSex" : [1,0]
 	},
 	{
 		"nRoomID" : 5,
-		"strRoomName" : "醉花楼",
+		"strRoomName" : "Drunk flower floor",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["萧宝卷","陈圆圆",""],
+		"litPeopleName" : ["Xiao Baojuan","Hsing Yuan",""],
 		"litPeopleSex" : [0,1]
 	},
 	{
 		"nRoomID" : 6,
-		"strRoomName" : "来仪阁",
+		"strRoomName" : "To meter pavilion",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["赛金花","杨广",""],
+		"litPeopleName" : ["Diaocan","Guang-Shun Yang",""],
 		"litPeopleSex" : [1,0]
 	},
 	{
 		"nRoomID" : 7,
-		"strRoomName" : "天上人间",
+		"strRoomName" : "Far From Heaven",
 		"strMode" : "Default",
 		"strDiff" : "Simple",
 		"nSongID" : 0,
 		"nNumOfPeople" : 2,
-		"litPeopleName" : ["朱厚照","杜十娘",""],
+		"litPeopleName" : ["ZhuHouZhao","DU shi-niang",""],
 		"litPeopleSex" : [0,1]
 	}
 ]

@@ -22,3 +22,4 @@ Default = Default
 Drumbeat = Drumbeat
 Dynamic = Dynamic
 Notation = Notation
+ExitHintContext = Sure you want to exit?

@@ -108,7 +108,10 @@ public class NvMessageBox : NvUIDialogBase {
 		m_btnOk.eventOnClick += OnButtonClick;
 		m_btnCancel.eventOnClick += OnButtonClick;
 		m_btnOkCentered.eventOnClick += OnButtonClick;
-		
+
+        m_btnOk.caption = "Ok";
+        m_btnOkCentered.caption = "Ok";
+        m_btnCancel.caption = "Cancel";
 		// specifical
 		//m_bg = transform.FindChild("Main Panel/Background");
 		
@@ -187,12 +190,12 @@ public class NvMessageBox : NvUIDialogBase {
 			if ( m_style == EMessageBoxStyle.eStyle_OkayCancel || m_style == EMessageBoxStyle.eStyle_OkayOnly )
 			{
 				//m_result = EResult.eResult_Okay;
-				Debug.Log ("NvMessage Callback: OnOkay");
+				//Debug.Log ("NvMessage Callback: OnOkay");
 				endModal( (int)EResult.eResult_Okay );
 			}
 			else if ( m_style == EMessageBoxStyle.eStyle_YesNo )
 			{
-				Debug.Log ("NvMessage Callback: OnYes");
+				//Debug.Log ("NvMessage Callback: OnYes");
 				endModal( (int)EResult.eResult_Yes );
 			}
 		}
@@ -200,15 +203,18 @@ public class NvMessageBox : NvUIDialogBase {
 		{
 			if ( m_style == EMessageBoxStyle.eStyle_OkayCancel || m_style == EMessageBoxStyle.eStyle_OkayOnly )
 			{
-				Debug.Log ("NvMessage Callback: OnCancel");
+				//Debug.Log ("NvMessage Callback: OnCancel");
 				endModal( (int)EResult.eResult_Cancel );
 			}
 			else if ( m_style == EMessageBoxStyle.eStyle_YesNo )
 			{
-				Debug.Log ("NvMessage Callback: OnNo");
+				//Debug.Log ("NvMessage Callback: OnNo");
 				endModal( (int)EResult.eResult_No );
 			}
 		}
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_touch");
 	}
 	
 	protected override void OnDlgClose ()
