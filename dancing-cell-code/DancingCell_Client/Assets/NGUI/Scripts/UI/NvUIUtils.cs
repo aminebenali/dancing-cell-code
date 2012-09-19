@@ -159,6 +159,7 @@ public class NvUIDialogLayer
 		}
 		else
 		{
+            //Debug.LogError(dlgName + "    " + dlgPrefab);
 			GameObject dlgPrefabObj = Resources.Load ( dlgPrefab ) as GameObject;
 			return createDialog( dlgName, dlgPrefabObj );
 		}

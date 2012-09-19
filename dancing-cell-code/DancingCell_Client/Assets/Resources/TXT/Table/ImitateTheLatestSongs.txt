@@ -8,7 +8,7 @@
 	{
 		"nSongID" : 1,
 		"strSongName" : "一吻天荒",
-		"strOwner" : "苏小小",
+		"strOwner" : "So Siu Siu",
 		"nIsMySelf" : 0
 	},
 	{
@@ -20,31 +20,31 @@
 	{
 		"nSongID" : 3,
 		"strSongName" : "Candy",
-		"strOwner" : "陈圆圆",
+		"strOwner" : "Hsing Yuan",
 		"nIsMySelf" : 0
 	},
 	{
 		"nSongID" : 4,
 		"strSongName" : "没有什么不同",
-		"strOwner" : "赛金花",
+		"strOwner" : "Yokihi",
 		"nIsMySelf" : 0
 	},
 	{
 		"nSongID" : 5,
 		"strSongName" : "Let Yourself Go",
-		"strOwner" : "杜十娘",
+		"strOwner" : "DU shi-niang",
 		"nIsMySelf" : 0
 	},
 	{
 		"nSongID" : 6,
 		"strSongName" : "你并不懂我",
-		"strOwner" : "梁红玉",
+		"strOwner" : "Hong-Yu Liang",
 		"nIsMySelf" : 0
 	},
 	{
 		"nSongID" : 7,
 		"strSongName" : "爱情公寓",
-		"strOwner" : "李师师",
+		"strOwner" : "Worthy",
 		"nIsMySelf" : 0
 	}
 ]

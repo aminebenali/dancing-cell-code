@@ -1,7 +1,7 @@
 [
 	{
 		"nFriendID" : 0,
-		"strFriendName" : "上官婉儿",
+		"strFriendName" : "Shangguan Wan'er",
 		"nFriendSex" : 1,
 		"nFriendLv" : 5,
 		"nHasMusic" : 6,
@@ -9,7 +9,7 @@
 	},
 	{
 		"nFriendID" : 1,
-		"strFriendName" : "李师师",
+		"strFriendName" : "Worthy",
 		"nFriendSex" : 1,
 		"nFriendLv" : 8,
 		"nHasMusic" : 8,
@@ -17,7 +17,7 @@
 	},
 	{
 		"nFriendID" : 2,
-		"strFriendName" : "完颜亮",
+		"strFriendName" : "Hailingwang",
 		"nFriendSex" : 0,
 		"nFriendLv" : 3,
 		"nHasMusic" : 2,
@@ -25,7 +25,7 @@
 	},
 	{
 		"nFriendID" : 3,
-		"strFriendName" : "杨广",
+		"strFriendName" : "Guang Yang",
 		"nFriendSex" : 0,
 		"nFriendLv" : 12,
 		"nHasMusic" : 15,
@@ -33,7 +33,7 @@
 	},
 	{
 		"nFriendID" : 4,
-		"strFriendName" : "陈圆圆",
+		"strFriendName" : "Yuanyuan",
 		"nFriendSex" : 1,
 		"nFriendLv" : 17,
 		"nHasMusic" : 20,

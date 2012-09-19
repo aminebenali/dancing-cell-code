@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DcGame : MonoBehaviour, SceneSwitchListener 
 {
-
     static private DcGame sInstance = null;
+    static public bool gEnableKeyChecker = true;
 
     static public DcGame getInstance()
 	{
@@ -26,6 +26,7 @@ public class DcGame : MonoBehaviour, SceneSwitchListener
 			Singlton.getInstance("NvLocalizationManager");
 			Singlton.getInstance("NvSoundController");
             Singlton.getInstance("DCGesture");
+            Singlton.getInstance("NvKeyChecker");
 			//Singlton.getInstance("NvSceneChangeColor");
 			//Singlton.getInstance("NvAppearanceController");
 			//Singlton.getInstance("NvMotionController");
