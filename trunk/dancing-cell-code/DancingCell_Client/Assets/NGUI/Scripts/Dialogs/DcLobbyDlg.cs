@@ -207,26 +207,13 @@ public class DcLobbyDlg : NvUIDialogBase
 	
 	private void SelSong()
     {
-//		showDialog(false);
-//		
-//		GameObject obj = GameObject.Find("Disk");
-//		if(obj)
-//		{
-//        	NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-//			DcDiskDlg dlgD = m_DialogMgr.FindDialog("DiskDlg")as DcDiskDlg;
-//			dlgD.showDialog(true);
-//            dlgD.ShowDiffSel(false);
-//		}
-//		else
-//		{
-			SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-        	mgr.ChangeScene("UI_MyHome_Disk");
-			mgr.cShareData.nDiskEntranceType = 1;
-		
-			mgr.cShareData.bIsInBuildNewRoom = true;
-			mgr.cShareData.strCurRoomName = InpRoomName.text;
-//		}
-//		
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+    	mgr.ChangeScene("UI_MyHome_Disk");
+		mgr.cShareData.nDiskEntranceType = 1;
+	
+		mgr.cShareData.bIsInBuildNewRoom = true;
+		mgr.cShareData.strCurRoomName = InpRoomName.text;
+
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");
     }
@@ -247,7 +234,7 @@ public class DcLobbyDlg : NvUIDialogBase
 		if(bPlaySound)
 		{
 			NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-			soundctr.PlaySe("ui_touch");
+            soundctr.PlaySe("ui_enter");
 		}
 	}
 	
@@ -275,6 +262,6 @@ public class DcLobbyDlg : NvUIDialogBase
 		mgr.cShareData.bIsInBuildNewRoom = false;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 }

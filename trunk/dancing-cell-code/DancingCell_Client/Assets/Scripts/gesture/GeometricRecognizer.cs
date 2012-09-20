@@ -402,7 +402,6 @@ public class GeometricRecognizer
 		addTemplate("Triangle_3", samples.getGestureTriangle_3());
 		addTemplate("Triangle_4", samples.getGestureTriangle_4());
 		addTemplate("Triangle_5", samples.getGestureTriangle_5());
-		
 
 		//addTemplate("RightCurlyBrace", samples.getGestureRightCurlyBrace());
 		//addTemplate("RightSquareBracket", samples.getGestureRightSquareBracket());
@@ -412,7 +411,10 @@ public class GeometricRecognizer
 		//addTemplate("Spiral", samples.getGestureSpiral());
 		//addTemplate("Star", samples.getGestureStar());
 		//addTemplate("Triangle", samples.getGestureTriangle());
-		//addTemplate("V", samples.getGestureV());
+		addTemplate("V", samples.getGestureV());
 		//addTemplate("X", samples.getGestureX());
+
+        addTemplate("Lighting", samples.getGestureLighting());
+
 	}
 }

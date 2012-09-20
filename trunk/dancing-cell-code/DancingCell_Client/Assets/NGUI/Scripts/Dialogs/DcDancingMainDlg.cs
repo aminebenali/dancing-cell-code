@@ -28,8 +28,10 @@ public class DcDancingMainDlg : NvUIDialogBase
 	public UISprite SprMiss;
 
     public UISprite SprCombo;
-    public UISprite SprShowTime;
-	public UISprite SprShowTimeAcc;
+    public GameObject cComboNum;
+
+    public GameObject cShowTime;
+    public GameObject cShowTimeAcc;
 	
 	public UIButton BtnDrumBeat;
 	public UISprite SprDrumBeatHalo;
@@ -39,7 +41,7 @@ public class DcDancingMainDlg : NvUIDialogBase
     public UISprite[] SprOperator;
     public UISprite SprGestureBg;
 	
-	private string[] strOpeCodelst = {"null","shang","xia","zuo","you","juxing","sanjiao","","","",
+	private string[] strOpeCodelst = {"null","shang","xia","zuo","you","shandian","v","sanjiao","juxing","",
                                      "","","","shangzuo","shangyou","","","","","",
                                      "","","","xiazuo","xiayou","","","","","",
                                      "","zuoshang","zuoxia","","","","","","","",
@@ -132,8 +134,8 @@ public class DcDancingMainDlg : NvUIDialogBase
 		SprGood.animation.Stop();
 		SprBad.animation.Stop();
 		SprMiss.animation.Stop();
-        SprShowTime.animation.Stop();
-		SprShowTimeAcc.animation.Stop();
+        cShowTime.animation.Stop();
+        cShowTimeAcc.animation.Stop();
 		
 		SprReady.enabled = false;
 		SprGo.enabled = false;
@@ -141,8 +143,8 @@ public class DcDancingMainDlg : NvUIDialogBase
 		SprGood.enabled = false;
 		SprBad.enabled = false;
 		SprMiss.enabled = false;
-        SprShowTime.enabled = false;
-		SprShowTimeAcc.enabled = false;
+        cShowTime.SetActiveRecursively(false);
+        cShowTimeAcc.SetActiveRecursively(false);
 
         BtnDrumBeat.gameObject.active = false;
 		SprDrumBeatHalo.enabled = false;
@@ -324,9 +326,17 @@ public class DcDancingMainDlg : NvUIDialogBase
 						{
 							cCurOpeData = mgr.cShareData.lstBeatData[cCurSongData.litBeatDataIdx].litOpeData[nCurOpeDataIdx];
 	                        cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Clear();
-							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,7));
-							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,7));
-							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,7));
+							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,8));
+							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,8));
+							cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5,8));
+                            if ((int)UnityEngine.Random.Range(0, 10) > 4)
+                            {
+                                cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5, 8));
+                            }
+                            if ((int)UnityEngine.Random.Range(0, 10) > 6)
+                            {
+                                cCurOpeData.mapOpeCode[mgr.cShareData.strDiffLv].litOpeInfo.Add((int)UnityEngine.Random.Range(5, 8));
+                            }
 	                        nRecordCurOpeCnt = 3;
 							nTempTurns = 2;
 						}
@@ -676,8 +686,12 @@ public class DcDancingMainDlg : NvUIDialogBase
             case "Down":        VerdictOperator(2); break;
             case "Left":        VerdictOperator(3); break;
             case "Right":       VerdictOperator(4); break;
-            case "Rectangle":   VerdictOperator(5); break;
-            case "Triangle":    VerdictOperator(6); break;
+
+            case "Lighting":    VerdictOperator(5); break;
+            case "V":           VerdictOperator(6); break;
+            case "Triangle":    VerdictOperator(7); break;
+            case "Rectangle":   VerdictOperator(8); break;
+
             case "UpLeft":      VerdictOperator(13); break;
             case "UpRight":     VerdictOperator(14); break;
             case "DownLeft":    VerdictOperator(23); break;
@@ -699,21 +713,27 @@ public class DcDancingMainDlg : NvUIDialogBase
     {
         if (cComboNumber.ShowNumber(ref SprComboNumber, nComboNum) == 0)
         {
+            SprCombo.animation.Stop();
             SprCombo.enabled = false;
-			SprCombo.animation.Stop();
+            cComboNum.animation.Stop();
+            cComboNum.SetActiveRecursively(false);
             cComboNumber.Hide(ref SprComboNumber);
         }
         else
         {
+            SprCombo.animation.Stop();
+            SprCombo.animation.Play();
             SprCombo.enabled = true;
-			SprCombo.animation.Play();
+            cComboNum.animation.Stop();
+            cComboNum.animation.Play();
+            cComboNum.SetActiveRecursively(true);
         }
     }
 
     void ShowTimeStart()
     {
-        SprShowTime.animation.Play();
-        SprShowTime.enabled = true;
+        cShowTime.SetActiveRecursively(true);
+        cShowTime.animation.Play();
         nComboNum4Result += nComboNum;
         nComboNum = 0;
         ShowCombo();
@@ -733,11 +753,11 @@ public class DcDancingMainDlg : NvUIDialogBase
 
     void ShowTimeAccomplish()
     {
-		//Debug.LogError("ShowTimeAccomplish");
-        SprShowTime.animation.Stop();
-        SprShowTime.enabled = false;
-		SprShowTimeAcc.animation.Play();
-        SprShowTimeAcc.enabled = true;
+        //Debug.LogError("ShowTimeAccomplish");
+        cShowTime.SetActiveRecursively(true);
+        cShowTime.animation.Stop();
+        cShowTimeAcc.SetActiveRecursively(true);
+        cShowTimeAcc.animation.Play();
         bIsInShowTime = false;
 		nComboNum = 0;
 
