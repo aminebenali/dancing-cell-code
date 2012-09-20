@@ -131,6 +131,6 @@ public class DcDresserDlg : NvUIDialogBase
         mgr.cShareData.nShopEntranceType = 4;
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 }

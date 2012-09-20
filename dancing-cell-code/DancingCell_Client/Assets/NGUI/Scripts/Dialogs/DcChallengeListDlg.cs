@@ -82,25 +82,11 @@ public class DcChallengeListDlg : NvUIDialogBase
 
     private void ReturnMap()
     {
-		Debug.Log("ReturnMap");
-        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        //soundctr.PlayBgMusic("Map");
-        soundctr.PlaySe("ui_touch");
-
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene("UI_Map");
 
-//         GameObject obj = GameObject.Find("Map");
-//         if (obj)
-//         {
-//             NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-//             DcMapDlg dlgM = m_DialogMgr.FindDialog("MapDlg") as DcMapDlg;
-//             dlgM.showDialog(true);
-//         }
-
-        //NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        //soundctr.PlayBgMusic("Map");
-		//soundctr.PlaySe("ui_touch");
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_touch");
     }
 
     private void SelChallengeIndex(object sender)

@@ -34,8 +34,9 @@ public class DcMapDlg : NvUIDialogBase
 
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene("UI_MyHome_Outside");
-		
-		PlayBtnSound();
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_enter");
     }
 
     private void GotoChallengBuilding(object sender)
@@ -48,27 +49,15 @@ public class DcMapDlg : NvUIDialogBase
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.cShareData.nCurSelBuildingIdx = nSelBuilding;
         AddChallengeListBegin();
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_enter");
     }
 	
 	void AddChallengeListBegin()
     {
-        PlayBtnSound();
-// 		GameObject obj = GameObject.Find("ChallengeList");
-// 		if(obj)
-// 		{
-//             showDialog(false);
-// 			NvUIDialogManager m_DialogMgr = obj.GetComponent(typeof(NvUIDialogManager)) as NvUIDialogManager;
-// 			DcChallengeListDlg dlgCL = m_DialogMgr.FindDialog("ChallengeListDlg")as DcChallengeListDlg;
-// 			dlgCL.showDialog(true);
-// 			dlgCL.SetChallengeChallenge();
-//             dlgCL.InitChbSel();
-// 			//Debug.Log("dlgCL.nCurSelScene:" + dlgCL.nCurSelScene);
-// 		}
-//        	else
-		{
-			SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-        	mgr.ChangeScene("UI_ChallengeList"/*,AddChallengeListEnd*/);
-		}
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        mgr.ChangeScene("UI_ChallengeList"/*,AddChallengeListEnd*/);
     }
 	
 	void AddChallengeListEnd(string str)
@@ -91,41 +80,29 @@ public class DcMapDlg : NvUIDialogBase
 	
 	private void GotoShop()
     {
-		//Debug.Log("GotoShop");
-		showDialog(false);
-
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene("UI_Shop");
 		mgr.cShareData.nShopEntranceType = 0;
-		
-		PlayBtnSound();
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_enter");
     }
 	
 	private void GotoTask()
     {
-		//Debug.Log("GotoTask");
-		showDialog(false);
-
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene("UI_Task");
-		
-		PlayBtnSound();
+
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_enter");
     }
 
     private void GotoLobby()
     {
-        //Debug.Log("GotoLobby");
-        showDialog(false);
-
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         mgr.ChangeScene("UI_Lobby");
 
-        PlayBtnSound();
+        NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        soundctr.PlaySe("ui_enter");
     }
-	
-	private void PlayBtnSound()
-	{
-		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
-	}
 }

@@ -32,7 +32,7 @@ public class DcInteriorDlg : NvUIDialogBase
 		mgr.cShareData.nDiskEntranceType = 0;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 	
 	private void GotoChest()
@@ -41,7 +41,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Chest");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 
     private void GotoDresser()
@@ -50,7 +50,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Dresser");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 	
 	private void GotoShop()
@@ -62,7 +62,7 @@ public class DcInteriorDlg : NvUIDialogBase
 		mgr.cShareData.nShopEntranceType = 2;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
 	}
 	
 	public void GotoPersonal()
@@ -71,7 +71,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Personal");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 	
 	public void GotoSuccess()
@@ -80,7 +80,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Success");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
     }
 	
 	private void GotoFriend()
@@ -89,7 +89,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Friend");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
 	}
 	
 	private void GotoRecordedSongs()
@@ -98,7 +98,7 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_RecordedSongs");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
 	}
 	
 	private void GotoTheLatestSong()
@@ -107,6 +107,6 @@ public class DcInteriorDlg : NvUIDialogBase
         mgr.ChangeScene("UI_TheLatestSong");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_touch");
+        soundctr.PlaySe("ui_enter");
 	}
 }
