@@ -135,6 +135,21 @@ public class DcShareData
     public string[] strWomanCharIcon = { "Head portrait girl 01", "Head portrait girl 02", "Head portrait girl 03" };
 	
 	public string[] strDancingMode = { "Default", "Drumbeat", "Dynamic", "Notation" };
+
+    //public string[] strAvatar_ItemIcon_AtlasesName = { "BoyClothes", "BoyHair", "Face", "GirlClothes", "GirlHair", "Pants" };
+
+    public string[] strAvatar_ItemIcon_BoyClothes = { "Boy Clothes 01", "Boy Clothes 02", "Boy Clothes 03", "Boy Clothes 04", 
+                                                      "Boy Clothes 05", "Boy Clothes 06", "Boy Clothes 07", "Boy Clothes 08" };
+    public string[] strAvatar_ItemIcon_BoyHair = { "Boy Hair 01", "Boy Hair 02", "Boy Hair 03", "Boy Hair 04",
+                                                   "Boy Hair 05", "Boy Hair 06", "Boy Hair 07", "Boy Hair 08"};
+    public string[] strAvatar_ItemIcon_Face = { "Face 01", "Face 02", "Face 03", "Face 04",
+                                                "Face 05", "Face 06", "Face 07", "Face 08"};
+    public string[] strAvatar_ItemIcon_GirlClothes = { "Girl Clothes 01", "Girl Clothes 02", "Girl Clothes 03", "Girl Clothes 04",
+                                                        "Girl Clothes 05", "Girl Clothes 06", "Girl Clothes 07", "Girl Clothes 08"};
+    public string[] strAvatar_ItemIcon_GirlHair = { "Girl Hair 01", "Girl Hair 02", "Girl Hair 03", "Girl Hair 04",
+                                                    "Girl Hair 05", "Girl Hair 06", "Girl Hair 07", "Girl Hair 08"};
+    public string[] strAvatar_ItemIcon_Pants = { "Pants 01", "Pants 02", "Pants 03", "Pants 04",
+                                                 "Pants 05", "Pants 06", "Pants 07", "Pants 08"};
 	
 	public bool bIsInBuildNewRoom = false;
 	public string strCurRoomName = "";//Create new room process to select songs temporary record the current room name
