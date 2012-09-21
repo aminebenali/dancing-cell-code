@@ -61,8 +61,8 @@ public class DcPersonalDlg : NvUIDialogBase
 		SetAttribute(CharAttr.eEndurance,60);
 		SetAttribute(CharAttr.eCharm,50);
 		SetAttribute(CharAttr.eTechnique,80);
-		
-		cMoneyNumber.Init(ref SprMoneyNumber,true);
+
+        cMoneyNumber.Init(ref SprMoneyNumber, eNumberType.eSilver);
         cExpNumber.Init(ref SprExpNumber);
 		
 		//test

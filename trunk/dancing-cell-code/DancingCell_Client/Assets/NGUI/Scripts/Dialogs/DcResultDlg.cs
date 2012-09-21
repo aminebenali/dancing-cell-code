@@ -40,9 +40,9 @@ public class DcResultDlg : NvUIDialogBase
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
         soundctr.PlayBgMusic("music_result");
- 		
-        cBasicNumber.Init(ref SprBasicNumber,true);
-        cComboNumber.Init(ref SprComboNumber,true);
+
+        cBasicNumber.Init(ref SprBasicNumber, eNumberType.eSilver);
+        cComboNumber.Init(ref SprComboNumber, eNumberType.eSilver);
  
         PanBgShake.animation.Stop();
         SprWin.animation.Stop();
