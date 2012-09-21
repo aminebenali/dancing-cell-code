@@ -92,7 +92,7 @@ public class DcDancingMainDlg : NvUIDialogBase
 
 
         cNumber.Init(ref SprNumber);
-        cComboNumber.Init(ref SprComboNumber);
+        cComboNumber.Init(ref SprComboNumber, eNumberType.eCombo);
         ShowCombo();
 		
 		SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;

@@ -16,7 +16,7 @@ public class DcDresserDlg : NvUIDialogBase
 
     protected override void OnDlgCreate()
     {
-        cMoneyNumber.Init(ref SprMoneyNumber, true);
+        cMoneyNumber.Init(ref SprMoneyNumber, eNumberType.eSilver);
         cExpNumber.Init(ref SprExpNumber);
 
         //test
@@ -58,8 +58,57 @@ public class DcDresserDlg : NvUIDialogBase
                 }
             }
         }
-		
+
+        TempInitHairAndFaceIcon(0);
+        TempInitHairAndFaceIcon(5);
+
 		DcGlobalFunc.CreateChar(mgr.cShareData.eUserSex, CharModel.eOne, CharForWhat.eDresser,true);
+    }
+
+    void TempInitHairAndFaceIcon(int nSelTag)
+    {
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        GameObject cObjPrefab = null;
+        GameObject cGOPrefab = null;
+        int nCurIconsLen = 5;
+        switch (nSelTag)
+        {
+            case 0:
+                if (mgr.cShareData.eUserSex == CharSex.eMan)
+                {
+                    cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/BoyHair", typeof(GameObject)) as GameObject;
+                }
+                else
+                {
+                    cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/GirlHair", typeof(GameObject)) as GameObject;
+                }
+                break;
+            case 5:
+                cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/Face", typeof(GameObject)) as GameObject;
+                break;
+        }
+        cGOPrefab = Utility.Instantiate(cObjPrefab) as GameObject;
+
+        for (int i = 0 + nSelTag; i < nCurIconsLen + nSelTag; i++)
+        {
+            SprItemBg[i].enabled = true;
+            SprItemIcon[i].enabled = true;
+
+            SprItemIcon[i].atlas = cGOPrefab.GetComponent(typeof(UIAtlas)) as UIAtlas;
+
+            switch (nSelTag)
+            {
+                case 0:
+                    if (mgr.cShareData.eUserSex == CharSex.eMan)
+                        SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_BoyHair[i];
+                    else
+                        SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_GirlHair[i];
+                    break;
+                case 5:
+                    SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_Face[i - nSelTag];
+                    break;
+            }
+        }
     }
 
     Vector3 GetMousePos()

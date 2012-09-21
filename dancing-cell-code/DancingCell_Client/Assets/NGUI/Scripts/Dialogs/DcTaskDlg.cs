@@ -16,7 +16,7 @@ public class DcTaskDlg : NvUIDialogBase
 
 	protected override void OnDlgCreate()
 	{
-        cMoneyNumber.Init(ref SprMoneyNumber, true);
+        cMoneyNumber.Init(ref SprMoneyNumber, eNumberType.eSilver);
         cExpNumber.Init(ref SprExpNumber);
 	}
 	

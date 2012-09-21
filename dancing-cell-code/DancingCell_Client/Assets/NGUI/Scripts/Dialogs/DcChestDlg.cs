@@ -16,7 +16,7 @@ public class DcChestDlg : NvUIDialogBase
 	
 	protected override void OnDlgCreate()
 	{
-        cMoneyNumber.Init(ref SprMoneyNumber,true);
+        cMoneyNumber.Init(ref SprMoneyNumber, eNumberType.eSilver);
         cExpNumber.Init(ref SprExpNumber);
 		
 		//test
@@ -59,8 +59,57 @@ public class DcChestDlg : NvUIDialogBase
             }
         }
 
+        TempInitClothesAndPantsIcon(0);
+        TempInitClothesAndPantsIcon(5);
+
         DcGlobalFunc.CreateChar(mgr.cShareData.eUserSex, CharModel.eOne, CharForWhat.eChest,true);
 	}
+
+    void TempInitClothesAndPantsIcon(int nSelTag)
+    {
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        GameObject cObjPrefab = null;
+        GameObject cGOPrefab = null;
+        int nCurIconsLen = 5;
+        switch (nSelTag)
+        {
+            case 0:
+                if (mgr.cShareData.eUserSex == CharSex.eMan)
+                {
+                    cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/BoyClothes", typeof(GameObject)) as GameObject;
+                }
+                else
+                {
+                    cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/GirlClothes", typeof(GameObject)) as GameObject;
+                }
+                break;
+            case 5:
+                cObjPrefab = Resources.Load("UI Prefabs/Atlases/UI/ItemIcon/Pants", typeof(GameObject)) as GameObject;
+                break;
+        }
+        cGOPrefab = Utility.Instantiate(cObjPrefab) as GameObject;
+
+        for (int i = 0+nSelTag; i < nCurIconsLen+nSelTag; i++)
+        {   
+            SprItemBg[i].enabled = true;
+            SprItemIcon[i].enabled = true;
+
+            SprItemIcon[i].atlas = cGOPrefab.GetComponent(typeof(UIAtlas)) as UIAtlas;
+
+            switch (nSelTag)
+            {
+                case 0:
+                    if (mgr.cShareData.eUserSex == CharSex.eMan)
+                        SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_BoyClothes[i];
+                    else
+                        SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_GirlClothes[i];
+                    break;
+                case 5:
+                    SprItemIcon[i].spriteName = mgr.cShareData.strAvatar_ItemIcon_Pants[i - nSelTag];
+                    break;
+            }
+        }
+    }
 
     Vector3 GetMousePos()
     {
