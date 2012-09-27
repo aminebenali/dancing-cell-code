@@ -297,7 +297,7 @@ public class DcDancingMainDlg : NvUIDialogBase
                 SprDrumBeatHalo.enabled = false;
                 SprDrumBeatHalo.animation.Stop();
 
-                cGesture.SetGestureEnable(false);
+                //cGesture.SetGestureEnable(false);
             }
         }
 		
@@ -369,7 +369,7 @@ public class DcDancingMainDlg : NvUIDialogBase
                 SprDrumBeatHalo.animation.Play();
 				bIsCanPressDrum = true;
 				cCurOpeData = null;
-                cGesture.SetGestureEnable(false);
+                //cGesture.SetGestureEnable(false);
 			}
 			else
 			{
@@ -417,7 +417,7 @@ public class DcDancingMainDlg : NvUIDialogBase
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");
 
-        showDialog(false);
+        cGesture.SetGestureEnable(false);
 
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         if (mgr.cShareData.nDancingEntranceType == 0)
@@ -433,7 +433,6 @@ public class DcDancingMainDlg : NvUIDialogBase
         	mgr.ChangeScene("UI_WaitingRoom");
 		}
 		
-        cGesture.SetGestureEnable(false);
     }
 	
 	private void DrumBeat()
@@ -673,13 +672,36 @@ public class DcDancingMainDlg : NvUIDialogBase
         mgr.cShareData.nBasicScore = nCurScore;
         mgr.cShareData.nComboScore = nComboNum4Result * nScoreStandard[1]/*nPerfectNum*nScoreStandard[0]*/;
        	mgr.ChangeScene("UI_Result");
-
-        cGesture.SetGestureEnable(false);
 	}
 
+    string strLighting = "Lighting";
+    string strV = "V";
+    string strTriangle = "Triangle";
+    string strRectangle = "Rectangle";
     public void DistinguishGesture(string str)
     {
-        //Debug.Log("DistinguishGesture:" + str);
+        Debug.LogError("DistinguishGesture:" + str);
+        if (str.IndexOf(strLighting) > -1)
+        {
+            VerdictOperator(5);
+            return;
+        }
+        else if (str.IndexOf(strV) > -1)
+        {
+            VerdictOperator(6);
+            return;
+        }
+        else if (str.IndexOf(strTriangle) > -1)
+        {
+            VerdictOperator(7);
+            return;
+        }
+        else if (str.IndexOf(strRectangle) > -1)
+        {
+            VerdictOperator(8);
+            return;
+        }
+
         switch (str)
         {
             case "Up":          VerdictOperator(1); break;
@@ -687,10 +709,10 @@ public class DcDancingMainDlg : NvUIDialogBase
             case "Left":        VerdictOperator(3); break;
             case "Right":       VerdictOperator(4); break;
 
-            case "Lighting":    VerdictOperator(5); break;
-            case "V":           VerdictOperator(6); break;
-            case "Triangle":    VerdictOperator(7); break;
-            case "Rectangle":   VerdictOperator(8); break;
+            //case "Lighting":    VerdictOperator(5); break;
+            //case "V":           VerdictOperator(6); break;
+            //case "Triangle":    VerdictOperator(7); break;
+            //case "Rectangle":   VerdictOperator(8); break;
 
             case "UpLeft":      VerdictOperator(13); break;
             case "UpRight":     VerdictOperator(14); break;
