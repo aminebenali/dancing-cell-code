@@ -378,14 +378,15 @@ public class GeometricRecognizer
 		//addTemplate("LineDownDiagonal", samples.getGestureLineDownDiagonal());
 		//addTemplate("Pigtail", samples.getGesturePigtail());
 		//addTemplate("QuestionMark", samples.getGestureQuestionMark());
-		addTemplate("Rectangle", samples.getGestureRectangle());
-		addTemplate("Rectangle_1", samples.getGestureRectangle_1());
-		addTemplate("Rectangle_2", samples.getGestureRectangle_2());
-		addTemplate("Rectangle_3", samples.getGestureRectangle_3());
-		addTemplate("Rectangle_4", samples.getGestureRectangle_4());
-		addTemplate("Rectangle_5", samples.getGestureRectangle_5());
-		addTemplate("Rectangle_6", samples.getGestureRectangle_6());
-		addTemplate("Rectangle_7", samples.getGestureRectangle_7());
+
+        //addTemplate("Rectangle", samples.getGestureRectangle());
+        //addTemplate("Rectangle_1", samples.getGestureRectangle_1());
+        //addTemplate("Rectangle_2", samples.getGestureRectangle_2());
+        //addTemplate("Rectangle_3", samples.getGestureRectangle_3());
+        //addTemplate("Rectangle_4", samples.getGestureRectangle_4());
+        //addTemplate("Rectangle_5", samples.getGestureRectangle_5());
+        //addTemplate("Rectangle_6", samples.getGestureRectangle_6());
+        //addTemplate("Rectangle_7", samples.getGestureRectangle_7());
 
         addTemplate("UpLeft",   samples.getGestureUpLeft());
         addTemplate("UpRight",  samples.getGestureUpRight());
@@ -402,6 +403,8 @@ public class GeometricRecognizer
 		addTemplate("Triangle_3", samples.getGestureTriangle_3());
 		addTemplate("Triangle_4", samples.getGestureTriangle_4());
 		addTemplate("Triangle_5", samples.getGestureTriangle_5());
+        addTemplate("Triangle_6", samples.getGestureTriangle_6());
+        addTemplate("Triangle_7", samples.getGestureTriangle_7());
 
 		//addTemplate("RightCurlyBrace", samples.getGestureRightCurlyBrace());
 		//addTemplate("RightSquareBracket", samples.getGestureRightSquareBracket());
@@ -412,9 +415,13 @@ public class GeometricRecognizer
 		//addTemplate("Star", samples.getGestureStar());
 		//addTemplate("Triangle", samples.getGestureTriangle());
 		addTemplate("V", samples.getGestureV());
+        addTemplate("V_1", samples.getGestureV_1());
 		//addTemplate("X", samples.getGestureX());
 
         addTemplate("Lighting", samples.getGestureLighting());
-
+        addTemplate("Lighting1", samples.getGestureLighting1());
+        addTemplate("Lighting2", samples.getGestureLighting2());
+        addTemplate("Lighting3", samples.getGestureLighting3());
+        addTemplate("Lighting4", samples.getGestureLighting4());
 	}
 }

@@ -24,4 +24,9 @@ public class Point2D
 	{
 		return "("+x+","+y+")";
 	}
+
+    public Vector3 ToVector3()
+    {
+        return new Vector3((float)x,(float)y,0);
+    }
 }
