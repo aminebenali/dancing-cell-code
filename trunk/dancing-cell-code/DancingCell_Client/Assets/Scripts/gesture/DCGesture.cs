@@ -23,7 +23,9 @@ public class DCGesture : MonoBehaviour
 	private bool m_IsCanDoCatchGesture = true;//if over ui,it will be false
 	
 	private List<Point2D> m_Point2dList = new List<Point2D>();
-		
+	
+	private List<Point2D> m_LastPoint2dList = new List<Point2D>();
+	
 	private float m_TouchMoveLength = 0;
 
 	private float m_SingleDirOffAngle = 20.0f;
@@ -32,6 +34,12 @@ public class DCGesture : MonoBehaviour
 	
 	private bool m_IsSingleDir = false;
 	
+    private bool m_IsEditMode = false;
+
+//     void Awake()
+//     {
+//         Debug.LogError("Check it");
+//     }
 	// Use this for initialization
 	void Start () 
 	{
@@ -40,18 +48,21 @@ public class DCGesture : MonoBehaviour
 		geometricrec.loadTemplates();
 		
 		//LogShow.getInstance().debug("=>Test!!  ");
-			
+        if(m_IsEditMode)
+        {
+            m_IsEnabled = true;
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		CheckPressState();
-		
-		if(!m_IsEnabled )
+        if(!m_IsEnabled )
 		{
 			return;
 		}
+		CheckPressState();
+	
 		if(!ProcessPick())
 		{
 			Debug.LogWarning("  ProcessPick: FALSE");
@@ -65,15 +76,23 @@ public class DCGesture : MonoBehaviour
 		
 	}
 	
+    public List<Point2D> GetPoint2DList()
+    {
+        return m_LastPoint2dList;
+    }
 	private bool ProcessPick()
 	{
-		if(m_IsPress && IsOnUI())
+        bool isonui =  IsOnUI();
+
+        //Debug.LogWarning("ProcessPick: m_IsPress: "+m_IsPress+" isonui: "+isonui );
+
+		if(m_IsPress && isonui)
 		{
 			m_IsCanDoCatchGesture = false;
 			
 			ClearPoints();
 			
-			Debug.LogWarning(" ProcessPick OnUI ");
+			Debug.LogError(" ProcessPick OnUI ");
 			
 			return false;
 		}
@@ -90,13 +109,15 @@ public class DCGesture : MonoBehaviour
 	
 	private bool ProcessDrop()
 	{
-		if(m_IsUpPress && IsOnUI())
+        bool isonui = IsOnUI();
+
+		if(m_IsUpPress && isonui)
 		{
 			m_IsCanDoCatchGesture = false;
 			
 			ClearPoints();
 			
-			Debug.LogWarning(" ProcessPick OnUI ");
+			Debug.LogError(" ProcessPick OnUI ");
 			
 			
 			return false;
@@ -105,6 +126,8 @@ public class DCGesture : MonoBehaviour
 		{
 			if(!m_IsCanDoCatchGesture)
 			{
+                Debug.LogError(" m_IsCanDoCatchGesture: "+m_IsCanDoCatchGesture);
+
 				m_IsCanDoCatchGesture = true;
 				
 				return true;
@@ -121,6 +144,10 @@ public class DCGesture : MonoBehaviour
 	
 	private void GetPoint()
 	{
+        if(!m_IsEnabled)
+        {
+            return;
+        }
 //		if(UICamera.currentTouch==null)
 //		{
 //			Debug.LogError("UICamera.currentTouch==null");
@@ -192,12 +219,18 @@ public class DCGesture : MonoBehaviour
 			
 			return;
 		}
-		
-		//Debug.LogWarning("  m_Point2dList:  "+m_Point2dList.Count);
+
+        if(m_IsEditMode)
+        {
+            GestureTest getsset =  Singlton.getInstance("GestureTest")as GestureTest;
+            getsset.ClearPoints();
+        }
+
+		Debug.LogWarning("  m_Point2dList:  "+m_Point2dList.Count);
 		
 		string result = CatchGesture();
 		
-		//Debug.LogWarning("@@@@@@@@@@@@@@@@=========>  result:  "+result);
+		Debug.LogWarning("@@@@@@@@@@@@@@@@=========>  result:  "+result);
 		
 		if(FuncGetGesture!=null)
 		{
@@ -227,22 +260,32 @@ public class DCGesture : MonoBehaviour
 		{
 			return retresult;
 		}
-		float timedis = 0;
+		//float timedis = 0;
 		
-		float curtime = Time.time;
+		//float curtime = Time.time;
 		
 		RecognitionResult result = geometricrec.recognize(tmplist);
 		
-		timedis = Time.time - curtime;
+		//timedis = Time.time - curtime;
 		
-		Debug.LogWarning("++++++++++%%%%%%%%%%%%%%%%%%%    Timedis ; "+timedis);
-		/*
-		for(int i =0; i<m_Point2dList.Count;i++)
-		{
-			Debug.LogWarning(" Point: ["+i+"] :  "+ m_Point2dList[i].GetString());
-		}
-		*/
-		result.Print();
+		if(m_IsEditMode)
+        {
+            GestureTest gesturetest =  Singlton.getInstance("GestureTest")as GestureTest;
+
+            m_LastPoint2dList.Clear();
+
+            for(int i =0; i<m_Point2dList.Count;i++)
+            {
+              Debug.LogWarning(" ==========>m_Point2dList["+i+"]:  "+m_Point2dList[i].GetString());
+    		
+              m_LastPoint2dList.Add(m_Point2dList[i]);
+
+              gesturetest.SetPointToShow(m_Point2dList[i].ToVector3());
+            }
+
+		    result.Print();
+        }
+        
 		
 		if(result.name.Contains("Rectangle"))
 		{
@@ -388,6 +431,8 @@ public class DCGesture : MonoBehaviour
 		{
 			FuncNoHasPoints();
 		}
+        m_IsCanDoCatchGesture = true;
+
 		m_Point2dList.Clear();
 	}
 	
@@ -397,6 +442,10 @@ public class DCGesture : MonoBehaviour
 	
 	public void SetGestureEnable(bool enable,bool issingledir = false)
 	{
+        if(enable)
+        {
+            //Debug.LogError("SetGestureEnable true");
+        }
 		if(!enable)
 		{
 			ClearPoints();
@@ -410,18 +459,30 @@ public class DCGesture : MonoBehaviour
 	
 	private bool IsCanGetPos()
 	{
+        
 		if(!m_IsCanDoCatchGesture)
 		{
+            Debug.LogError("m_IsCanDoCatchGesture: "+m_IsCanDoCatchGesture);
+
 			return false;
 		}
 		if((Application.isEditor || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsWebPlayer) && Input.GetMouseButton(0))
 		{
+           // Debug.LogError("return true;");
+
 			return true;
 		}
 		else if(Input.touchCount==1 && ( m_IsHold||m_IsPress ||m_IsUpPress) && ( Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer))
 		{
+           //  Debug.LogError("return true;");
+
 			return true;
 		}
+        if(Input.GetMouseButton(0))
+        {
+            Input.GetMouseButton(0);
+        }
+        
 		return false;
 	}
 	
@@ -446,6 +507,10 @@ public class DCGesture : MonoBehaviour
 	
 	private void CheckPressState()
 	{
+        if(!m_IsEnabled)
+        {
+            return;
+        }
 		m_IsPress = false;
 		
 		m_IsUpPress = false;
@@ -485,6 +550,7 @@ public class DCGesture : MonoBehaviour
 				m_IsUpPress = true;
 			}
 		}
+      
 	}
 	
 	private bool IsOnUI()
