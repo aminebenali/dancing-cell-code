@@ -120,7 +120,7 @@ public class DcFriendDlg : NvUIDialogBase
 
     private void ShowFriendHomePanel(object sender)
 	{
-		PanFriendHome.gameObject.SetActiveRecursively(true);
+		//PanFriendHome.gameObject.SetActiveRecursively(true);
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
 		soundctr.PlaySe("ui_touch");
