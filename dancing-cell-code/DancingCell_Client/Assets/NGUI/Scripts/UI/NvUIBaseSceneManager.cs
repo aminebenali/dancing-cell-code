@@ -175,7 +175,7 @@ public class NvUIBaseSceneManager : MonoBehaviour {
 	
 		if(UICamera.hoveredObject !=null)
 		{
-			Debug.Log("UICamera.hoveredObject !=null:  "+UICamera.hoveredObject.name);
+			//Debug.Log("UICamera.hoveredObject !=null:  "+UICamera.hoveredObject.name);
 			return true;
 		}
 		

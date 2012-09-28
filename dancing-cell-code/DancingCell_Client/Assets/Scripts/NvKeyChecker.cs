@@ -1,6 +1,9 @@
 
 using UnityEngine;
+using UnityEditor;
+using System;
 using System.Collections;
+using System.IO;
 //using NetworkUtils;
 
 public class NvKeyChecker : MonoBehaviour
@@ -23,7 +26,7 @@ public class NvKeyChecker : MonoBehaviour
 		
 		if (Application.platform != RuntimePlatform.IPhonePlayer) 
 		{
-		    if (Input.GetKey (KeyCode.Escape)/* && !mMessageboxDisplayed*/) 
+		    if (Input.GetKey(KeyCode.Escape)/* && !mMessageboxDisplayed*/) 
 			{
 				Debug.Log ("KeyChecker : " + Input.GetKey (KeyCode.Escape));
 				string desc =  (Singlton.getInstance("NvLocalizationManager") as NvLocalizationManager).GetValue("ExitHintContext");
@@ -31,6 +34,38 @@ public class NvKeyChecker : MonoBehaviour
 				mMessageboxDisplayed = true;
 			}
 	    }
+		
+		if ( Application.isEditor )
+		{
+			if ( Input.GetKeyUp(KeyCode.F11) )
+			{
+				string strScreenshotPath = "Screenshot/"+System.DateTime.Now.ToString("yyyy_MM_dd HH_mm_ss")+".png";
+				Debug.LogWarning("CaptureScreenshot: "+strScreenshotPath);
+				Application.CaptureScreenshot(strScreenshotPath);
+				
+				NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+				soundctr.PlaySe("shutter");
+			}
+		}
+		
+		if (Application.isEditor || Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsWebPlayer)
+        {
+            if ( Input.GetKeyUp(KeyCode.F9) )
+			{
+				SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+				if(Application.loadedLevelName == "UI_Map")
+				{
+        			mgr.ChangeScene("UI_ProductionTeam");
+				}
+				else if(Application.loadedLevelName == "UI_ProductionTeam")
+				{
+        			mgr.ChangeScene("UI_Map");
+				}
+
+				NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
+        		soundctr.PlaySe("ui_enter");
+			}
+        }
 	}
 	
 	private void OnEndModal( int result )
