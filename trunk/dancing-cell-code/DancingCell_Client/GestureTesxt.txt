@@ -1,0 +1,79 @@
+ public List<Point2D> getGestureLighting4()
+{
+  List<Point2D> path = new List<Point2D>();
+ path.Add(new Point2D( 571,286));
+ path.Add(new Point2D( 555,284));
+ path.Add(new Point2D( 541,278));
+ path.Add(new Point2D( 532,273));
+ path.Add(new Point2D( 517,264));
+ path.Add(new Point2D( 503,253));
+ path.Add(new Point2D( 491,238));
+ path.Add(new Point2D( 485,224));
+ path.Add(new Point2D( 485,212));
+ path.Add(new Point2D( 490,192));
+ path.Add(new Point2D( 507,163));
+ path.Add(new Point2D( 520,146));
+ path.Add(new Point2D( 534,132));
+ path.Add(new Point2D( 545,122));
+ path.Add(new Point2D( 547,113));
+ path.Add(new Point2D( 535,104));
+ path.Add(new Point2D( 521,97));
+ path.Add(new Point2D( 491,90));
+ path.Add(new Point2D( 478,87));
+ path.Add(new Point2D( 451,82));
+ path.Add(new Point2D( 426,77));
+ path.Add(new Point2D( 405,75));
+ path.Add(new Point2D( 384,74));
+ return path;
+}
+ public List<Point2D> getGestureLighting4()
+{
+  List<Point2D> path = new List<Point2D>();
+ path.Add(new Point2D( 524,367));
+ path.Add(new Point2D( 513,368));
+ path.Add(new Point2D( 500,365));
+ path.Add(new Point2D( 489,361));
+ path.Add(new Point2D( 478,353));
+ path.Add(new Point2D( 472,337));
+ path.Add(new Point2D( 474,312));
+ path.Add(new Point2D( 483,289));
+ path.Add(new Point2D( 493,269));
+ path.Add(new Point2D( 504,253));
+ path.Add(new Point2D( 512,240));
+ path.Add(new Point2D( 521,229));
+ path.Add(new Point2D( 530,217));
+ path.Add(new Point2D( 534,207));
+ path.Add(new Point2D( 531,194));
+ path.Add(new Point2D( 515,184));
+ path.Add(new Point2D( 494,177));
+ path.Add(new Point2D( 473,174));
+ path.Add(new Point2D( 452,174));
+ path.Add(new Point2D( 436,173));
+ path.Add(new Point2D( 423,173));
+ return path;
+}
+ public List<Point2D> getGestureLighting4()
+{
+  List<Point2D> path = new List<Point2D>();
+ path.Add(new Point2D( 619,294));
+ path.Add(new Point2D( 605,292));
+ path.Add(new Point2D( 580,282));
+ path.Add(new Point2D( 548,270));
+ path.Add(new Point2D( 521,261));
+ path.Add(new Point2D( 500,250));
+ path.Add(new Point2D( 495,232));
+ path.Add(new Point2D( 502,209));
+ path.Add(new Point2D( 512,190));
+ path.Add(new Point2D( 525,173));
+ path.Add(new Point2D( 540,156));
+ path.Add(new Point2D( 552,141));
+ path.Add(new Point2D( 554,132));
+ path.Add(new Point2D( 540,126));
+ path.Add(new Point2D( 521,122));
+ path.Add(new Point2D( 464,114));
+ path.Add(new Point2D( 450,112));
+ path.Add(new Point2D( 437,110));
+ path.Add(new Point2D( 418,109));
+ path.Add(new Point2D( 408,109));
+ return path;
+}
