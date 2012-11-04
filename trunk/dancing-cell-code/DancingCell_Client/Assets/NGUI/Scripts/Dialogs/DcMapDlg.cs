@@ -16,13 +16,16 @@ public class DcMapDlg : NvUIDialogBase
 	protected override void OnDlgInit ()
     {
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
-        for (int i = 0; i < mgr.cShareData.lstBuildingData.Count; i++)
+        if (mgr != null && mgr.cShareData != null)
         {
-            LabBuildingName[i].text = mgr.cShareData.lstBuildingData[i].strBuildingName;
+            for (int i = 0; i < mgr.cShareData.lstBuildingData.Count; i++)
+            {
+                LabBuildingName[i].text = mgr.cShareData.lstBuildingData[i].strBuildingName;
 
-            float fLabWidth = LabBuildingName[i].relativeSize.x * 24f + 48f + 6f;
-            SprBuildingBg[i].transform.localScale = new Vector3(fLabWidth, 40f, 1f);
-            SprBuildingIcon[i].transform.localPosition = new Vector3(-fLabWidth / 2f + 26f, 0f, -220f);
+                float fLabWidth = LabBuildingName[i].relativeSize.x * 24f + 48f + 6f;
+                SprBuildingBg[i].transform.localScale = new Vector3(fLabWidth, 40f, 1f);
+                SprBuildingIcon[i].transform.localPosition = new Vector3(-fLabWidth / 2f + 26f, 0f, -220f);
+            }
         }
 	}
 	
