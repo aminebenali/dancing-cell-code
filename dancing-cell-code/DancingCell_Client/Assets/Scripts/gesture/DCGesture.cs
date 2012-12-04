@@ -92,7 +92,7 @@ public class DCGesture : MonoBehaviour
 			
 			ClearPoints();
 			
-			Debug.LogError(" ProcessPick OnUI ");
+			//Debug.LogError(" ProcessPick OnUI ");
 			
 			return false;
 		}
@@ -117,7 +117,7 @@ public class DCGesture : MonoBehaviour
 			
 			ClearPoints();
 			
-			Debug.LogError(" ProcessPick OnUI ");
+			//Debug.LogError(" ProcessPick OnUI ");
 			
 			
 			return false;

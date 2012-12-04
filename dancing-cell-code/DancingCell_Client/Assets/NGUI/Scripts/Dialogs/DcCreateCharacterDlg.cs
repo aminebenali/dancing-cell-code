@@ -77,13 +77,26 @@ public class DcCreateCharacterDlg : NvUIDialogBase
 
     void ChangeCharColor(GameObject cObj)
     {
-        float fColor = (cObj.transform.position.z + 0.15f) * -1.65f;
+        float fColor = (cObj.transform.position.z + 0.25f) * -1.65f;
         fColor = fColor > 1f ? 1f : fColor;
         SkinnedMeshRenderer[] cSMR;
         cSMR = cObj.GetComponentsInChildren<SkinnedMeshRenderer>();
+        float fTemp = fColor * 0.588f;
         for (int i = 0; i < cSMR.Length; i++)
         {
-            cSMR[i].material.color = new Color(fColor * 0.588f, fColor * 0.588f, fColor * 0.588f, 1f);
+            cSMR[i].material.color = new Color(fTemp, fTemp, fTemp, 1f);
+
+            if(cSMR[i].name == "hair" || cSMR[i].name == "glasses")
+            {
+                if(fTemp < 0.5f)
+                {
+                    cSMR[i].material.shader = Shader.Find("Transparent/Diffuse");
+                }
+                else
+                {
+                    cSMR[i].material.shader = Shader.Find("Unlit/Transparent Cutout");
+                }
+            }
         }
     }
 
