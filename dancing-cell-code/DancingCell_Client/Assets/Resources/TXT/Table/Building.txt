@@ -5,125 +5,47 @@
         "strBuildingName" : "Play Grounds",
         "strMasterName"   : "",
         "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
-        "litSongIDs"      : [
-            0,
-            1,
-            2,
-            3
-        ],
-        "litDiffLvs"      : [
-            "Simple",
-            "Simple",
-            "Simple",
-            "Normal"
-        ],
-        "litSongMaster"   : [
-            "Ai Kurosawa",
-            "Kyoko Ayana",
-            "An Kuraki",
-            "Azumi Ozawa"
-        ],
-        "litMasterSex"    : [
-            1,
-            1,
-            1,
-            1
-        ],
-        "litMode"         : [
-            "Default",
-            "Default",
-            "Default",
-            "Default"
-        ],
-        "litHighScores"   : [
-            15100,
-            10000,
-            11500,
-            9500
-        ]
+        "litSongIDs"      : [0,1,2,3,4],
+        "litDiffLvs"      : ["Simple","Simple","Simple","Normal","Normal"],
+        "litSongMaster"   : ["Ai Kurosawa","Kyoko Ayana","An Kuraki","Azumi Ozawa","Kyoko Ayana"],
+        "litMasterSex"    : [1,1,1,1,1],
+        "litMode"         : ["Default","Default","Default","Default","Default"],
+        "litHighScores"   : [15100,10000,11500,9500,9650]
     },
     {
         "nBuildingID" : 1,
         "strBuildingName" : "Pub",
         "strMasterName"   : "",
         "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
-        "litSongIDs"      : [
-            4,
-            5
-        ],
-        "litDiffLvs"      : [
-            "Normal",
-            "Diff"
-        ],
-        "litSongMaster"   : [
-            "Akane Kuramochello",
-            "Aya Kurosaki"
-        ],
-        "litMasterSex"    : [
-            1,
-            1
-        ],
-        "litMode"         : [
-            "Default",
-            "Default"
-        ],
-        "litHighScores"   : [
-            10000,
-            11500
-        ]
+        "litSongIDs"      : [5,6,7,8,9],
+        "litDiffLvs"      : ["Normal","Normal","Normal","Diff","Diff"],
+        "litSongMaster"   : ["Akane Kuramochello","Hime Kamiya","Kyoko Ayana","Aya Kurosaki","Kyoko Ayana"],
+        "litMasterSex"    : [1,1,1,1,1],
+        "litMode"         : ["Default","Default","Default","Default","Default"],
+        "litHighScores"   : [10000,11500,9800,9700,9600]
     },
     {
         "nBuildingID" : 2,
         "strBuildingName" : "Night Club",
         "strMasterName"   : "",
         "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
-        "litSongIDs"      : [
-            6,
-            7
-        ],
-        "litDiffLvs"      : [
-            "Normal",
-            "Diff"
-        ],
-        "litSongMaster"   : [
-            "Mihiro Taniguchi",
-            "Hime Kamiya"
-        ],
-        "litMasterSex"    : [
-            1,
-            1
-        ],
-        "litMode"         : [
-            "Default",
-            "Default"
-        ],
-        "litHighScores"   : [
-            9500,
-            10000
-        ]
+        "litSongIDs"      : [10,11,12,13,14],
+        "litDiffLvs"      : ["Normal","Normal","Normal","Diff","Diff"],
+        "litSongMaster"   : ["Mihiro Taniguchi","Kyoko Ayana","Kyoko Ayana","Hime Kamiya","An Kuraki"],
+        "litMasterSex"    : [1,1,1,1,1],
+        "litMode"         : ["Default","Default","Default","Default","Default"],
+        "litHighScores"   : [9500,10000,10500,8600,8500]
     },
     {
         "nBuildingID" : 3,
         "strBuildingName" : "House Dj Club",
         "strMasterName"   : "",
         "str3DSceneName"  : "3D_DancingMain_Scene_LoveBear",
-        "litSongIDs"      : [
-            8
-        ],
-        "litDiffLvs"      : [
-            "Diff"
-        ],
-        "litSongMaster"   : [
-            "Ayumi Iwamoto"
-        ],
-        "litMasterSex"    : [
-            1
-        ],
-        "litMode"         : [
-            "Default"
-        ],
-        "litHighScores"   : [
-            11500
-        ]
+        "litSongIDs"      : [15,16,17,18],
+        "litDiffLvs"      : ["Diff","Diff","Diff","Diff"],
+        "litSongMaster"   : ["Ayumi Iwamoto","An Kuraki","Hime Kamiya","Kyoko Ayana"],
+        "litMasterSex"    : [1,1,1,1],
+        "litMode"         : ["Default","Default","Default","Default"],
+        "litHighScores"   : [11500,7850,12000,11000]
     }
 ]

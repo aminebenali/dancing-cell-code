@@ -5,13 +5,13 @@
 		"strSongName" : "Day By Day",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "daybyday",
-		"strSinger" : "凤凰传奇",
+		"strSinger" : "T-ara",
 		"strAudition" : "Day By Day_试听",
 		"strOfficial" : "Day By Day",
 		"nRewardMoney" : 1000,
 		"nRewardExp" : 500,
-		"nShowReadyTime" : 2,
-		"nShowGoTime" : 4,
+		"nShowReadyTime" : 7,
+		"nShowGoTime" : 14,
 		"nBeatTime" : 3755,
 		"nLength" : 85,
 		"litBeatDataIdx" : 0
@@ -50,7 +50,7 @@
 	},
 	{
 		"nSongID" : 3,
-		"nWhereScene" : 1,
+		"nWhereScene" : 0,
 		"strSongName" : "Call Me Maybe",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "callmemaybe",
@@ -66,7 +66,7 @@
 	},
 	{
 		"nSongID" : 4,
-		"nWhereScene" : 1,
+		"nWhereScene" : 0,
 		"strSongName" : "Gangnam Style",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "gangnamstyle",
@@ -82,7 +82,7 @@
 	},
 	{
 		"nSongID" : 5,
-		"nWhereScene" : 1,
+		"nWhereScene" : 0,
 		"strSongName" : "Gee",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "gee",
@@ -98,7 +98,7 @@
 	},
 	{
 		"nSongID" : 6,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Halo",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "halo",
@@ -114,7 +114,7 @@
 	},
 	{
 		"nSongID" : 7,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Lydia",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "lydia",
@@ -130,7 +130,7 @@
 	},
 	{
 		"nSongID" : 8,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Moves Like Jagger",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "moveslikejagger",
@@ -146,7 +146,7 @@
 	},
 	{
 		"nSongID" : 9,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Mr.Simple",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "mrSimple",
@@ -162,7 +162,7 @@
 	},
 	{
 		"nSongID" : 10,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Mr.Taxi",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "mrtaxi",
@@ -178,7 +178,7 @@
 	},
 	{
 		"nSongID" : 11,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Nobody",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "nobody",
@@ -194,7 +194,7 @@
 	},
 	{
 		"nSongID" : 12,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "One More Night",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "onemorenight",
@@ -210,7 +210,7 @@
 	},
 	{
 		"nSongID" : 13,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "One Thing",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "onething",
@@ -226,12 +226,12 @@
 	},
 	{
 		"nSongID" : 14,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Part Of Me",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "partofme",
 		"strSinger" : "Katy Perry",
-		"strAudition" : "Part Of Me试听",
+		"strAudition" : "Part Of Me_试听",
 		"strOfficial" : "Part Of Me",
 		"nRewardMoney" : 2000,
 		"nRewardExp" : 1000,
@@ -242,7 +242,7 @@
 	},
 	{
 		"nSongID" : 15,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Poker Face",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "pokerface",
@@ -258,7 +258,7 @@
 	},
 	{
 		"nSongID" : 16,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Sorry Sorry",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "sorrysorry",
@@ -274,7 +274,7 @@
 	},
 	{
 		"nSongID" : 17,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "The Boys",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "theboys",
@@ -290,7 +290,7 @@
 	},
 	{
 		"nSongID" : 18,
-		"nWhereScene" : 2,
+		"nWhereScene" : 0,
 		"strSongName" : "Touch",
 		"strAtlas" : "ZZZ",
 		"strSpriteName" : "touch",
