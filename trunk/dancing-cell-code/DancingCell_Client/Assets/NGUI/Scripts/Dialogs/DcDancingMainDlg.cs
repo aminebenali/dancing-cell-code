@@ -252,7 +252,9 @@ public class DcDancingMainDlg : NvUIDialogBase
 		fTime += Time.deltaTime;
 		//Debug.Log("ftime" + ftime);
 		nTime = (int)fTime;
-        //LabTest.text = "Time:" + nTime.ToString() + "  Beat:" + fBeatTime + "  Score:" + nScore;
+
+        //测试节奏用
+        LabTest.text = "Time:" + nTime.ToString() + "  Beat:" + fBeatTime/* + "  Score:" + nScore*/;
 		
 		fSliderStep = (300/fBeatTime)*Time.deltaTime;
 		posSliderPos.x += fSliderStep;

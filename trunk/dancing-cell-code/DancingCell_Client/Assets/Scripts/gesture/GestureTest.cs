@@ -47,7 +47,7 @@ public class GestureTest : MonoBehaviour
     {
         string path=Application.dataPath+"//Resource//";
 
-        path = "./Assets/Resources/TXT/MYCHESE.txt";
+        path = "./Assets/Resources/TXT/Edit_NewGesture.txt";
        
         string file = path;
          
@@ -79,7 +79,7 @@ public class GestureTest : MonoBehaviour
 #if UNITY_EDITOR
         string path = Application.dataPath + "//Resource//";
 
-        path = "./Assets/Resources/TXT/MYCHESE.txt";
+        path = "./Assets/Resources/TXT/Edit_NewGesture.txt";
 
         string file = path;
 
@@ -124,11 +124,11 @@ public class GestureTest : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 50, 100), "Save"))
+        if (GUI.Button(new Rect(10, 10, 50, 60), "Save"))
         {
             RealSave();
         }
-        if (GUI.Button(new Rect(10, 80, 50, 100), "Clear"))
+        if (GUI.Button(new Rect(10, 70, 50, 60), "Clear"))
         {
             Clear();
         }
