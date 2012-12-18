@@ -7,9 +7,6 @@ using Random=UnityEngine.Random;
 // This class can be used to create characters by combining assets.
 // The assets are stored in assetbundles to minimize the assets that
 // have to be downloaded.
-// 这个类可以用来创建角色通过结合资产。
-// 资产存储在assetbundles最小化的资产
-// 必须下载。
 public class CharacterGenerator
 {
 	// Stores the WWW used to retrieve available CharacterElements stored
