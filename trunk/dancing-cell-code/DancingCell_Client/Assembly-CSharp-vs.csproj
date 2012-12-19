@@ -61,6 +61,7 @@
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcResultDlg.cs" />
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcResultDlg_Anim.cs" />
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcShopDlg.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Dialogs\DcSongBeatEditDlg.cs" />
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcSuccessDlg.cs" />
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcTaskDlg.cs" />
      <Compile Include="Assets\NGUI\Scripts\Dialogs\DcTheLatestSongDlg.cs" />
