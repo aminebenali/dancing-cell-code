@@ -122,7 +122,7 @@ public class DcChallengeListDlg : NvUIDialogBase
         mgr.cShareData.nDancingEntranceType = 0;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_enter");
+		soundctr.PlaySe("ui_touch");
 	}
 	
 	public void SetChallengeChallenge()
@@ -174,6 +174,6 @@ public class DcChallengeListDlg : NvUIDialogBase
         cExpNumber.ShowNumber(ref SprExpNumber, mgr.cShareData.cCurSongData.nRewardExp);
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlayBgMusic(mgr.cShareData.cCurSongData.strAudition);
+        soundctr.PlaySong(mgr.cShareData.cCurSongData.strAudition);
 	}
 }

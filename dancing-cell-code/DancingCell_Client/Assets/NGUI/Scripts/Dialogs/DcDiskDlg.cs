@@ -48,7 +48,7 @@ public class DcDiskDlg : NvUIDialogBase
 			}
 			
 			NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-            soundctr.PlayBgMusic(mgr.cShareData.lstSongData[nAtMiddleIdx].strAudition);
+            soundctr.PlaySong(mgr.cShareData.lstSongData[nAtMiddleIdx].strAudition);
 			
 			for(int i = 0; i < LabSongName.Length; i++)
 			{
@@ -168,7 +168,7 @@ public class DcDiskDlg : NvUIDialogBase
                     LabSongName[i].text = mgr.cShareData.lstSongData[nAtMiddleIdx].strSongName;
 				}
 				NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-                soundctr.PlayBgMusic(mgr.cShareData.lstSongData[nAtMiddleIdx].strAudition);
+                soundctr.PlaySong(mgr.cShareData.lstSongData[nAtMiddleIdx].strAudition);
                 break;
             case -1://left turn
                 SprEachChange(ref SprDisk, nAtMiddleIdx, -20.5f, -10f);
@@ -267,7 +267,7 @@ public class DcDiskDlg : NvUIDialogBase
         ShowDiffSel(true);
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_enter");
+		soundctr.PlaySe("ui_touch");
     }
 	
 	private void DiffCancel()
@@ -276,7 +276,7 @@ public class DcDiskDlg : NvUIDialogBase
         ShowDiffSel(false);
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlaySe("ui_enter");
+		soundctr.PlaySe("ui_touch");
     }
 	
 	private void SelDiff(object sender)
@@ -306,7 +306,7 @@ public class DcDiskDlg : NvUIDialogBase
 		//showDialog(false);
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
 
         mgr.cShareData.cCurSongData = mgr.cShareData.lstSongData[nAtMiddleIdx];
         mgr.cShareData.strMode = "Default";

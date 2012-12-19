@@ -133,7 +133,7 @@ public class DcWaitingRoomDlg : NvUIDialogBase
 		mgr.cShareData.nDancingEntranceType = 2;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 	
 }

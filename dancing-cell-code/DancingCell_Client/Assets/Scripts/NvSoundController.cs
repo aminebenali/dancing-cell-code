@@ -26,6 +26,8 @@ public class NvSoundController : MonoBehaviour
 	
 	public bool m_isMute = false;
 	
+    public bool m_bIsSong = false;
+
 	public enum E_SND_STAT
 	{
 		STAT_SE_FADE_BGM = 0,
@@ -251,6 +253,14 @@ public class NvSoundController : MonoBehaviour
 		StopBgmImmediately();
 		PlayBgm(bgmName, 0, 0);
 	}
+
+    public void PlaySong(string bgmName)
+	{
+        m_bIsSong = true;
+		StopBgmImmediately();
+		PlayBgm(bgmName, 0, 0);
+        m_bIsSong = false;
+	}
 	
 	private void PlayBgmClip( float fadeInTime )
 	{
@@ -262,7 +272,15 @@ public class NvSoundController : MonoBehaviour
 		if (m_TrackBgm[m_ActiveBgmTrack].clip == null || !m_TrackBgm[m_ActiveBgmTrack].clip.name.Equals(m_CurrentBgmName))
 		{
 			//Debug.Log("reload!!!!!");
-			AudioClip clip = Resources.Load("Sound/Bgm/"+m_CurrentBgmName) as AudioClip;
+			AudioClip clip = null;
+            if(m_bIsSong)
+            {
+                clip = Resources.Load("Sound/Song/"+m_CurrentBgmName) as AudioClip;
+            }
+            else
+            {
+                clip = Resources.Load("Sound/Bgm/"+m_CurrentBgmName) as AudioClip;
+            }
 			m_TrackBgm[m_ActiveBgmTrack].clip = clip;
 		}
 		m_TrackBgm[m_ActiveBgmTrack].volume = 0.011f;
@@ -276,7 +294,15 @@ public class NvSoundController : MonoBehaviour
 	{
 		m_ActiveBgmTrack = (m_ActiveBgmTrack + 1)%2;
 ///		Debug.Log("play bgm AAAAAAAAAAA now Active channel is " + m_ActiveBgmTrack );
-		AudioClip clip = Resources.Load("Sound/Bgm/"+bgmName) as AudioClip;
+        AudioClip clip = null;
+        if(m_bIsSong)
+        {
+            clip = Resources.Load("Sound/Song/"+bgmName) as AudioClip;
+        }
+        else
+        {
+            clip = Resources.Load("Sound/Bgm/"+bgmName) as AudioClip;
+        }
 		m_CurrentBgmName = bgmName;
 		m_TrackBgm[m_ActiveBgmTrack].enabled = true;
 		m_TrackBgm[m_ActiveBgmTrack].clip = clip;

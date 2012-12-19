@@ -63,7 +63,7 @@ public class NvKeyChecker : MonoBehaviour
 				}
 
 				NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        		soundctr.PlaySe("ui_enter");
+        		soundctr.PlaySe("ui_touch");
 			}
         }
 	}

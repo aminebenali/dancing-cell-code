@@ -27,7 +27,7 @@ public class DcBeginGameDlg : NvUIDialogBase
     private void GotoMap()
     {
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
 
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         if (PlayerPrefs.HasKey("UserName"))
