@@ -234,7 +234,7 @@ public class DcLobbyDlg : NvUIDialogBase
 		if(bPlaySound)
 		{
 			NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-            soundctr.PlaySe("ui_enter");
+            soundctr.PlaySe("ui_touch");
 		}
 	}
 	
@@ -262,6 +262,6 @@ public class DcLobbyDlg : NvUIDialogBase
 		mgr.cShareData.bIsInBuildNewRoom = false;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 }

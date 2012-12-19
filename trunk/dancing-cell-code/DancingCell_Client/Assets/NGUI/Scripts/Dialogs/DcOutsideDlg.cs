@@ -33,7 +33,7 @@ public class DcOutsideDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Interior");
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 	
 	private void GotoShop()
@@ -45,6 +45,6 @@ public class DcOutsideDlg : NvUIDialogBase
 		mgr.cShareData.nShopEntranceType = 1;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
 	}
 }

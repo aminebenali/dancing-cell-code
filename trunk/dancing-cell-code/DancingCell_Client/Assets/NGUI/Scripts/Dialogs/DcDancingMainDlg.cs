@@ -566,7 +566,7 @@ public class DcDancingMainDlg : NvUIDialogBase
 	public void StartDancing()
 	{
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-		soundctr.PlayBgMusic(cCurSongData.strOfficial);
+        soundctr.PlaySong(cCurSongData.strOfficial);
 
         bIsStart = true;
         fBeatTime = (float)cCurSongData.nBeatTime / 1000f;

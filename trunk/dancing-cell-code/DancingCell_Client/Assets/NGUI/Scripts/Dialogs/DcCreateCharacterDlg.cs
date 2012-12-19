@@ -114,7 +114,7 @@ public class DcCreateCharacterDlg : NvUIDialogBase
         mgr.ChangeScene("UI_Map");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 
     private void Random()

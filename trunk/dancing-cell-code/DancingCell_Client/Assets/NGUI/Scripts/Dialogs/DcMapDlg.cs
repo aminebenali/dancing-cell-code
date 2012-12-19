@@ -39,7 +39,7 @@ public class DcMapDlg : NvUIDialogBase
         mgr.ChangeScene("UI_MyHome_Outside");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 
     private void GotoChallengBuilding(object sender)
@@ -54,7 +54,7 @@ public class DcMapDlg : NvUIDialogBase
         AddChallengeListBegin();
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 	
 	void AddChallengeListBegin()
@@ -88,7 +88,7 @@ public class DcMapDlg : NvUIDialogBase
 		mgr.cShareData.nShopEntranceType = 0;
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 	
 	private void GotoTask()
@@ -97,7 +97,7 @@ public class DcMapDlg : NvUIDialogBase
         mgr.ChangeScene("UI_Task");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 
     private void GotoLobby()
@@ -106,6 +106,6 @@ public class DcMapDlg : NvUIDialogBase
         mgr.ChangeScene("UI_Lobby");
 
         NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 }

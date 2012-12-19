@@ -180,6 +180,6 @@ public class DcChestDlg : NvUIDialogBase
 		mgr.cShareData.nShopEntranceType = 3;
 		
 		NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
-        soundctr.PlaySe("ui_enter");
+        soundctr.PlaySe("ui_touch");
     }
 }
