@@ -88,7 +88,7 @@ public class SceneManager : MonoBehaviour
 	
 	private NvCommonUIManager m_UIMgr;
 	
-	public DcShareData cShareData;
+	public DcShareData cShareData = null;
 	
 	void Awake ()
 	{

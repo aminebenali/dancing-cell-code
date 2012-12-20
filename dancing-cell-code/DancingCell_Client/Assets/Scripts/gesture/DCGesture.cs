@@ -34,7 +34,7 @@ public class DCGesture : MonoBehaviour
 	
 	private bool m_IsSingleDir = false;
 	
-    private bool m_IsEditMode = true;
+    private bool m_IsEditMode = false;
 
 //     void Awake()
 //     {
