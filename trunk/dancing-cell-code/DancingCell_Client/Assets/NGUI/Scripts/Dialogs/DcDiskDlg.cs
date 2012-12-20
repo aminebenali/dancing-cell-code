@@ -49,8 +49,8 @@ public class DcDiskDlg : NvUIDialogBase
 			
 			NvSoundController soundctr = Singlton.getInstance("NvSoundController") as NvSoundController;
             soundctr.PlaySong(mgr.cShareData.lstSongData[nAtMiddleIdx].strAudition);
-			
-			for(int i = 0; i < LabSongName.Length; i++)
+
+            for (int i = 0; i < mgr.cShareData.lstSongData.Count; i++)
 			{
                 LabSongName[i].text = mgr.cShareData.lstSongData[nAtMiddleIdx].strSongName;
 			}
