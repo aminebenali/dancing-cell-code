@@ -14,8 +14,14 @@ public class DcSongBeatEditDlg : NvUIDialogBase
     private object  objLastSelSongBtnSender = null; //记录歌曲列表中上一次被点击的控件对象
     private int     nCurSelEditSongIdx      = -1;   //当前编辑的歌曲序号
 
+    //提示框
+    private NvCommonUIManager mCommonUIManager = null;
+
+    //初始化
     protected override void OnDlgInit()
     {
+        mCommonUIManager = Singlton.getInstance("NvCommonUIManager") as NvCommonUIManager;
+
         for (int i = 0; i < SongSel.Length; i++)
         {
             SongSel[i].SetActiveRecursively(false);
@@ -38,10 +44,11 @@ public class DcSongBeatEditDlg : NvUIDialogBase
             }
         }
 
-        StartCoroutine(_ListedSongName());
+        StartCoroutine(_ListedSong());
     }
 
-    IEnumerator _ListedSongName()
+    //初始化-歌曲列表
+    IEnumerator _ListedSong()
     {
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
         while (mgr.cShareData == null)
@@ -56,6 +63,7 @@ public class DcSongBeatEditDlg : NvUIDialogBase
         }
     }
 
+    //单击歌曲列表中某首歌时的事件响应
     private void SelSong(object sender)
     {
         if (objLastSelSongBtnSender == sender)
@@ -80,6 +88,22 @@ public class DcSongBeatEditDlg : NvUIDialogBase
         soundctr.PlaySong(mgr.cShareData.lstSongData[nSelSong].strOfficial);
     }
 
+    //检索歌曲表ID
+    private void RetrievalSongListID()
+    {
+        SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
+        for (int i = 0; i < mgr.cShareData.lstSongData.Count; i++)
+        {
+            if (mgr.cShareData.lstSongData[i].nSongID != i)
+            {
+
+            }
+        }
+        mCommonUIManager.showMessageBox("歌曲表ID异常，工具默认以序号0开始递增1的标号规则修复歌曲ID", "",
+                                        NvMessageBox.EMessageBoxStyle.eStyle_OkayOnly, OnEndModal, true);
+    }
+
+    //保存当前编辑的歌曲信息
     private void SaveCueEditSongInfo()
     {
         SceneManager mgr = Singlton.getInstance("SceneManager") as SceneManager;
